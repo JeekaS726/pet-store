@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.271">
+<testcase classname="Pet Store" name="Create a pet and add a picture for Woodie" time="0.089">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given pet has category details..............................................undefined
+And pet has tag details.....................................................skipped
+And pet has following information...........................................skipped
+When the pet is created.....................................................skipped
+Then pet image will be uploaded.............................................skipped
+]]></failure>
+</testcase>
+<testcase classname="Pet Store" name="Create a pet and add a picture for Doodie" time="0.007">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given pet has category details..............................................undefined
+And pet has tag details.....................................................skipped
+And pet has following information...........................................skipped
+When the pet is created.....................................................skipped
+Then pet image will be uploaded.............................................skipped
+]]></failure>
+</testcase>
+</testsuite>

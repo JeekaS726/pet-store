@@ -1,0 +1,2345 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-20T04:56:53.843Z",
+        "line": 19,
+        "name": "Create a pet and add a picture for Woodie",
+        "description": "",
+        "id": "pet-store;create-a-pet-and-add-a-picture-for-\u003cpetname\u003e;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 344000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "pet has category details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_category_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "12345"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "terrier"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "pet has tag details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_tag_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "123456"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "WD"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "pet has following information",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_following_information(com.petStore.model.Pet)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "name",
+                  "photoUrls",
+                  "status"
+                ]
+              },
+              {
+                "cells": [
+                  "12345",
+                  "Woodie",
+                  "url",
+                  "available"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2165000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the pet is created \"/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.the_pet_is_created(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e but was \u003c405\u003e.\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\n\tat com.petStore.step.CreatePetAndAddPictureApiSteps.pet_image_will_be_uploaded(CreatePetAndAddPictureApiSteps.java:91)\n\tat ✽.pet image will be uploaded \"/pet/{petId}/uploadImage\"(file:///Users/zhibeksabyrova/pet-store/src/test/resources/features/api/create_pet_and_add_picture.feature:14)\n",
+              "duration": 394000000,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "pet image will be uploaded \"/pet/{petId}/uploadImage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet/{petId}/uploadImage\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_image_will_be_uploaded(java.lang.String,java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "fileName",
+                  "terrier.png"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:56:56.838Z",
+        "line": 20,
+        "name": "Create a pet and add a picture for Doodie",
+        "description": "",
+        "id": "pet-store;create-a-pet-and-add-a-picture-for-\u003cpetname\u003e;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "pet has category details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_category_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "12346"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "husky"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "pet has tag details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_tag_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "123457"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "DD"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "pet has following information",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_following_information(com.petStore.model.Pet)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "name",
+                  "photoUrls",
+                  "status"
+                ]
+              },
+              {
+                "cells": [
+                  "12346",
+                  "Doodie",
+                  "url",
+                  "pending"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 223000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the pet is created \"/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.the_pet_is_created(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e but was \u003c405\u003e.\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\n\tat com.petStore.step.CreatePetAndAddPictureApiSteps.pet_image_will_be_uploaded(CreatePetAndAddPictureApiSteps.java:91)\n\tat ✽.pet image will be uploaded \"/pet/{petId}/uploadImage\"(file:///Users/zhibeksabyrova/pet-store/src/test/resources/features/api/create_pet_and_add_picture.feature:14)\n",
+              "duration": 353000000,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "pet image will be uploaded \"/pet/{petId}/uploadImage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet/{petId}/uploadImage\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_image_will_be_uploaded(java.lang.String,java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "fileName",
+                  "husky.png"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Pet Store",
+    "description": "",
+    "id": "pet-store",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/api/create_pet_and_add_picture.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-20T04:56:57.429Z",
+        "line": 19,
+        "name": "Search for new pet and similar pets",
+        "description": "",
+        "id": "pet-store;search-for-new-pet-and-similar-pets;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "pet has category details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_category_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "12345"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "terrier"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "pet has tag details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_tag_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "123456"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "WD"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "pet has following information",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_following_information(com.petStore.model.Pet)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "name",
+                  "photoUrls",
+                  "status"
+                ]
+              },
+              {
+                "cells": [
+                  "12347",
+                  "Woodie",
+                  "url",
+                  "available"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 260000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the pet is created \"/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.the_pet_is_created(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 336000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "search for new pet \"/pet/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet/{petId}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.searchForNewPet(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e but was \u003c404\u003e.\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\n\tat com.petStore.step.CreatePetAndAddPictureApiSteps.searchForSimilarPets(CreatePetAndAddPictureApiSteps.java:117)\n\tat ✽.search for similar pets \"/findByStatus\"(file:///Users/zhibeksabyrova/pet-store/src/test/resources/features/api/search_new_pet_and_similar_pets.feature:15)\n",
+              "duration": 212000000,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "search for similar pets \"/findByStatus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/findByStatus\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.searchForSimilarPets(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:56:58.253Z",
+        "line": 20,
+        "name": "Search for new pet and similar pets",
+        "description": "",
+        "id": "pet-store;search-for-new-pet-and-similar-pets;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "pet has category details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_category_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "12346"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "husky"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "pet has tag details",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_tag_details(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "123457"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "DD"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "pet has following information",
+            "match": {
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.pet_has_following_information(com.petStore.model.Pet)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "name",
+                  "photoUrls",
+                  "status"
+                ]
+              },
+              {
+                "cells": [
+                  "12348",
+                  "Doodie",
+                  "url",
+                  "pending"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 223000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the pet is created \"/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.the_pet_is_created(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 207000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "search for new pet \"/pet/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/pet/{petId}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.searchForNewPet(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e but was \u003c404\u003e.\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\n\tat com.petStore.step.CreatePetAndAddPictureApiSteps.searchForSimilarPets(CreatePetAndAddPictureApiSteps.java:117)\n\tat ✽.search for similar pets \"/findByStatus\"(file:///Users/zhibeksabyrova/pet-store/src/test/resources/features/api/search_new_pet_and_similar_pets.feature:15)\n",
+              "duration": 269000000,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "search for similar pets \"/findByStatus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/findByStatus\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.petStore.step.CreatePetAndAddPictureApiSteps.searchForSimilarPets(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Pet Store",
+    "description": "",
+    "id": "pet-store",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/api/search_new_pet_and_similar_pets.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-20T04:56:58.964Z",
+        "line": 12,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2845000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 315000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"post ​/pet​/{petId}​/uploadImage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/pet​/{petId}​/uploadImage\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 199000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 58000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"post ​/pet​/{petId}​/uploadImage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/pet​/{petId}​/uploadImage\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:02.391Z",
+        "line": 13,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 116000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 288000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"post ​/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/pet\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 140000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"post ​/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/pet\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:02.995Z",
+        "line": 14,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 285000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"put ​/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put ​/pet\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 137000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"put ​/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put ​/pet\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:03.552Z",
+        "line": 15,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 75000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 276000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/pet​/findByStatus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/pet​/findByStatus\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 143000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/pet​/findByStatus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/pet​/findByStatus\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:04.113Z",
+        "line": 16,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 68000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 273000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/pet​/findByTags\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/pet​/findByTags\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 145000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 59000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/pet​/findByTags\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/pet​/findByTags\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:04.665Z",
+        "line": 17,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 295000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/pet​/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/pet​/{petId}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 140000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/pet​/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/pet​/{petId}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:05.240Z",
+        "line": 18,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 72000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 280000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"post ​/pet​/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/pet​/{petId}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 147000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 57000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"post ​/pet​/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/pet​/{petId}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:05.803Z",
+        "line": 19,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 67000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 302000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"delete ​/pet​/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delete ​/pet​/{petId}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 129000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"delete ​/pet​/{petId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delete ​/pet​/{petId}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:06.362Z",
+        "line": 20,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 79000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 274000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/store​/inventory\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/store​/inventory\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/store​/inventory\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/store​/inventory\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:06.898Z",
+        "line": 21,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 68000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 388000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"post ​/store​/order\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/store​/order\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 47000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"post ​/store​/order\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/store​/order\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:07.460Z",
+        "line": 22,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 72000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 276000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/store​/order​/{orderId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/store​/order​/{orderId}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 135000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/store​/order​/{orderId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/store​/order​/{orderId}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:08.004Z",
+        "line": 23,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 77000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 267000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"delete ​/store​/order​/{orderId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delete ​/store​/order​/{orderId}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 122000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"delete ​/store​/order​/{orderId}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delete ​/store​/order​/{orderId}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:08.531Z",
+        "line": 24,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;14",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 69000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 276000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"post ​/user​/createWithList\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/user​/createWithList\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 131000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 54000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"post ​/user​/createWithList\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/user​/createWithList\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:09.066Z",
+        "line": 25,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;15",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 75000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 276000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/user​/{username}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/user​/{username}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 130000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/user​/{username}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/user​/{username}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:09.606Z",
+        "line": 26,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;16",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 72000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 277000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"put ​/user​/{username}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put ​/user​/{username}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 134000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 54000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"put ​/user​/{username}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put ​/user​/{username}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:10.147Z",
+        "line": 27,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;17",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 74000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 300000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"delete ​/user​/{username}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delete ​/user​/{username}\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"delete ​/user​/{username}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delete ​/user​/{username}\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:10.707Z",
+        "line": 28,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;18",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 77000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 278000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/user​/login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/user​/login\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 136000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 57000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/user​/login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/user​/login\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:11.258Z",
+        "line": 29,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;19",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 81000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 271000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"get ​/user​/logout\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/user​/logout\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 110000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"get ​/user​/logout\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get ​/user​/logout\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:11.777Z",
+        "line": 30,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;20",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 268000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"post ​/user​/createWithArray\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/user​/createWithArray\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"post ​/user​/createWithArray\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/user​/createWithArray\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-20T04:57:12.305Z",
+        "line": 31,
+        "name": "Validating pet store swagger ui",
+        "description": "",
+        "id": "pet-store-swagger;validating-pet-store-swagger-ui;;21",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 71000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to \"https://petstore.swagger.io\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://petstore.swagger.io\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_navigates_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 280000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on endpoint with text \"post ​/user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/user\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_clicks_on_endpoint_with_text(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 127000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user validates endpoint has \"Parameters\" and \"Responses\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameters\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Responses\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_validates_endpoint_has_Parameters_and_Response_details(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user collapses the \"post ​/user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post ​/user\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.petStore.step.PetStoreSwaggerUiSteps.user_collapses_the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Pet store swagger",
+    "description": "",
+    "id": "pet-store-swagger",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/ui/user_expands_and_collapses_endpoints.feature",
+    "tags": []
+  }
+]
